@@ -896,6 +896,7 @@ $transition: all 400ms ease;
         flex-direction: row;
         border-radius: 20px;
         overflow: hidden;
+        position: relative;
     }
     // .form__left
     &__left {
@@ -970,8 +971,7 @@ $transition: all 400ms ease;
     &__img {
         position: absolute;
         top: 142px;
-        // left: 751px;
-        left: 39.2%;
+        left: 35%;
         z-index: 4;
     }
 }

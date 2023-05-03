@@ -812,6 +812,7 @@ h1, h2, h3, h4, h5, h6 {
   flex-direction: row;
   border-radius: 20px;
   overflow: hidden;
+  position: relative;
 }
 .form__left {
   background: #F9F9F9;
@@ -873,7 +874,7 @@ h1, h2, h3, h4, h5, h6 {
 .form__img {
   position: absolute;
   top: 142px;
-  left: 39.2%;
+  left: 35%;
   z-index: 4;
 }
 
