@@ -177,8 +177,8 @@ function validateInputName() {
     }
   }
 function validateInputNumber() {
-    const inputNumber = document.getElementById("nameInput").value;
-    const patternNumber = /^[a-zA-Z0-9_]{7,16}$/; // паттерн для ввода
+    const inputNumber = document.getElementById("numberInput").value;
+    const patternNumber = /^[0-9]{7,12}$/; // паттерн для ввода
     allField[1].querySelector('.field__title').style.color= '#F2F2F2';
     allField[1].querySelector('.field__block').style.borderColor= 'rgba(242, 242, 242, 0.5)';
     if (!patternNumber.test(inputNumber)) {
