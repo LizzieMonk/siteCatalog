@@ -2233,10 +2233,11 @@ $transition: all 400ms ease;
 	}
 	// .form__button
 	&__button {
+        padding: 15px;
         background: transparent;
-        margin-top: 0px;
+        margin-top: -15px;
         margin-right: 5px;
-        gap: 4px;
+        gap: 2px;
 	}
     // .form__img
     &__img {

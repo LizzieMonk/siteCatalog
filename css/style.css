@@ -1947,10 +1947,11 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 28px;
   }
   .form__button {
+    padding: 15px;
     background: transparent;
-    margin-top: 0px;
+    margin-top: -15px;
     margin-right: 5px;
-    gap: 4px;
+    gap: 2px;
   }
   .form__img {
     position: absolute;
