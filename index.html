@@ -536,15 +536,15 @@
                 <form class="form__input" action="#">
                     <div class="form__field field">
                         <small class="field__title">Ваше имя</small>
-                        <input class="field__block" type="text" name="Name" required>
+                        <input class="field__block" type="text" name="Name" id="nameInput" onblur="validateInputName()" required>
                     </div>
                     <div class="form__field field">
                         <small class="field__title">Номер телефона</small>
-                        <input class="field__block" type="text" name="Name" required>
+                        <input class="field__block" type="text" name="Name" id="numberInput" onblur="validateInputNumber()" required>
                     </div>
                     <div class="form__field field">
                         <small class="field__title">Комментарий</small>
-                        <textarea class="field__block field__block_message" name="Message" id="" required></textarea>
+                        <textarea class="field__block field__block_message" name="Message" id="messageInput" onblur="validateInputMessage()" required></textarea>
                     </div>
                 </form>
                 <button class="form__button button" type="submit">

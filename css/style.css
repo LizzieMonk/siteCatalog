@@ -281,6 +281,10 @@ h1, h2, h3, h4, h5, h6 {
   top: 475px;
   z-index: 10;
 }
+.slider-container__slider-next:hover {
+  transform: scale(1.1);
+}
+
 .slider {
   overflow: hidden;
   width: 1920px;
@@ -868,8 +872,10 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 36px;
 }
 .form__button {
+  padding: 15px;
   background: transparent;
-  margin-top: 20px;
+  margin-top: 6px;
+  margin-left: -15px;
 }
 .form__img {
   position: absolute;

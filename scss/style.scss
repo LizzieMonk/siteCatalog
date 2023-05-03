@@ -263,6 +263,9 @@ $transition: all 400ms ease;
         img{
             // background: red;
         }
+        &:hover{
+            transform: scale(1.1);
+        }
     }
 }
 .slider {
@@ -964,8 +967,10 @@ $transition: all 400ms ease;
 	}
 	// .form__button
 	&__button {
+        padding: 15px;
         background: transparent;
-        margin-top: 20px;
+        margin-top: 6px;
+        margin-left: -15px;
 	}
     // .form__img
     &__img {
