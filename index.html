@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalog</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <!-- ------------------NAVBAR------------------ -->
+    <nav class="nav">
+        <div class="nav__container container">
+            <ul class="menu menu_left">
+                <li><a class="menu__logo" href="#"><img src="./img/logo.png"></a></li>
+                <li><a class="menu__a" href="#">главная</a></li>
+                <li><a class="menu__a" href="#">каталог</a></li>
+                <li><a class="menu__a" href="#">новости</a></li>
+                <li><a class="menu__a" href="#">наш асц</a></li>
+                <li><a class="menu__a" href="#">контакты</a></li>
+                <li><a href="#"><img src="./img/search.svg"></a></li>
+            </ul>
+            <ul class="menu menu_burger">
+                <li><a class="menu__logo" href="#"><img src="./img/logo.png"></a></li>
+                <li><a class="menu__a" href="#">главная</a></li>
+                <li><a class="menu__a" href="#">каталог</a></li>
+                <li><a class="menu__a" href="#">новости</a></li>
+                <li><a class="menu__a" href="#">наш асц</a></li>
+                <li><a class="menu__a" href="#">контакты</a></li>
+                <li><a href="#"><img src="./img/search.svg"></a></li>
+            </ul>
+            <ul class="menu menu_right">
+                <li>
+                    <a class="menu__a" href="#">
+                    <div class="circle">
+                        <img src="./img/person.svg" alt="">
+                        <div class="circle__counter">
+                            <small class="circle__counter-text">1</small>
+                        </div>
+                    </div></a>
+                    <div class="profile">
+                        <div class="profile__container">
+                            <div class="profile__elem">
+                                <div class="circle">
+                                    <img src="./img/person.svg" alt="">
+                                </div>
+                                <span class="profile__text">Мария</span>
+                            </div>
+                            <a class="profile__a" href="#"><span class="profile__text">Личный кабинет</span></a>
+                            <a class="profile__a" href="#"><span class="profile__text">История заказов</span></a>
+                            <a class="profile__a" href="#"><span class="profile__text">Персональные предложения</span></a>
+                            <a class="profile__a" href="#"><span class="profile__text">Выйти</span></a>
+                        </div>
+                    </div>
+                </li>
+                <li><a class="menu__a" href="#">
+                    <div class="circle">
+                        <img src="./img/statistics.svg" alt="">
+                        <div class="circle__counter">
+                            <small class="circle__counter-text">0</small>
+                        </div>
+                    </div></a></li>
+                <li><a class="menu__a" href="#">
+                    <div class="circle">
+                        <img src="./img/favorites.svg" alt="">
+                        <div class="circle__counter">
+                            <small class="circle__counter-text">2</small>
+                        </div>
+                    </div></a></li>
+                <li><a class="menu__a" href="">
+                    <div class="circle">
+                        <img src="./img/shoppingcart.svg" alt="">
+                        <div class="circle__counter">
+                            <small class="circle__counter-text">3</small>
+                        </div>
+                    </div></a></li>
+            </ul>
+            <button class="btn-open" id="open-menu-btn">
+                <div class="circle">
+                <img src="./img/open-menu.svg" alt="">
+            </div></button>
+            <button class="btn-close" id="close-menu-btn">
+                <div class="circle">
+                <img src="./img/close-menu.svg" alt="">
+            </div></button>
+        </div>
+    </nav>
+    <!-- ------------------HEADER------------------ -->
+    <header class="header">
+        <div class="header__container container">
+            <div class="slider-container">
+                <span class="slider-container__bg">DELL</span>
+                <!-- <button class="slider-container__slider-prev"><i class="arrow-left"></i></button> -->
+                <div class="slider-container__slider slider">
+                    <div class="slider__line">
+                        <div class="slider__slide">
+                            <div class="slider__shadow"></div>
+                            <article class="slide">
+                                <a class="slide__scroll" href="#">
+                                    <img class="slide__scroll-icon" src="./img/slide-scroll-icon.svg">
+                                    <small class="slide__scroll-text">Scroll to catalog</small>
+                                </a>
+                                <div class="slide__description">
+                                    <small class="slide__subtitle">Новое поступление</small>
+                                    <span class="slide__title">Лучшие товары от компании Dell</span>
+                                    <a class="slide__button button" href="#">
+                                        <div class="button__circle">
+                                            <img class="button__arrow" src="./img/arrow.svg">
+                                        </div>
+                                        <span class="button__title">Подробнее</span>
+                                    </a>
+                                </div>
+                                <div class="slide__img">
+                                    <img src="./img/slider-image1.png" alt="">
+                                </div>
+                            </article>
+                        </div>
+                        <div class="slider__slide">
+                            <div class="slider__shadow"></div>
+                            <article class="slide">
+                                <a class="slide__scroll" href="#">
+                                    <img class="slide__scroll-icon" src="./img/slide-scroll-icon.svg">
+                                    <small class="slide__scroll-text">Scroll to catalog</small>
+                                </a>
+                                <div class="slide__description">
+                                    <small class="slide__subtitle">Новое поступление</small>
+                                    <span class="slide__title">Выгодное предложение от Dell</span>
+                                    <a class="slide__button button" href="#">
+                                        <div class="button__circle">
+                                            <img class="button__arrow" src="./img/arrow.svg">
+                                        </div>
+                                        <span class="button__title">Подробнее</span>
+                                    </a>
+                                </div>
+                                <div class="slide__img">
+                                    <img src="./img/slider-image2.png" alt="">
+                                </div>
+                            </article>
+                        </div>
+                        <div class="slider__slide">
+                            <div class="slider__shadow"></div>
+                            <article class="slide">
+                                <a class="slide__scroll" href="#">
+                                    <img class="slide__scroll-icon" src="./img/slide-scroll-icon.svg">
+                                    <small class="slide__scroll-text">Scroll to catalog</small>
+                                </a>
+                                <div class="slide__description">
+                                    <small class="slide__subtitle">Новое поступление</small>
+                                    <span class="slide__title">Лучшие товары от компании Dell</span>
+                                    <a class="slide__button button" href="#">
+                                        <div class="button__circle">
+                                            <img class="button__arrow" src="./img/arrow.svg">
+                                        </div>
+                                        <span class="button__title">Подробнее</span>
+                                    </a>
+                                </div>
+                                <div class="slide__img">
+                                    <img src="./img/slider-image1.png" alt="">
+                                </div>
+                            </article>
+                        </div>
+                        <div class="slider__slide">
+                            <div class="slider__shadow"></div>
+                            <article class="slide">
+                                <a class="slide__scroll" href="#">
+                                    <img class="slide__scroll-icon" src="./img/slide-scroll-icon.svg">
+                                    <small class="slide__scroll-text">Scroll to catalog</small>
+                                </a>
+                                <div class="slide__description">
+                                    <small class="slide__subtitle">Новое поступление</small>
+                                    <span class="slide__title">Лучшие товары от компании Dell</span>
+                                    <a class="slide__button button" href="#">
+                                        <div class="button__circle">
+                                            <img class="button__arrow" src="./img/arrow.svg">
+                                        </div>
+                                        <span class="button__title">Подробнее</span>
+                                    </a>
+                                </div>
+                                <div class="slide__img">
+                                    <img src="./img/slider-image1.png" alt="">
+                                </div>
+                            </article>
+                        </div>
+                        <div class="slider__slide">
+                            <div class="slider__shadow"></div>
+                            <article class="slide">
+                                <a class="slide__scroll" href="#">
+                                    <img class="slide__scroll-icon" src="./img/slide-scroll-icon.svg">
+                                    <small class="slide__scroll-text">Scroll to catalog</small>
+                                </a>
+                                <div class="slide__description">
+                                    <small class="slide__subtitle">Новое поступление</small>
+                                    <span class="slide__title">Лучшие товары от компании Dell</span>
+                                    <a class="slide__button button" href="#">
+                                        <div class="button__circle">
+                                            <img class="button__arrow" src="./img/arrow.svg">
+                                        </div>
+                                        <span class="button__title">Подробнее</span>
+                                    </a>
+                                </div>
+                                <div class="slide__img">
+                                    <img src="./img/slider-image1.png" alt="">
+                                </div>
+                            </article>
+                        </div>
+                        <div class="slider__slide">
+                            <div class="slider__shadow"></div>
+                            <article class="slide">
+                                <a class="slide__scroll" href="#">
+                                    <img class="slide__scroll-icon" src="./img/slide-scroll-icon.svg">
+                                    <small class="slide__scroll-text">Scroll to catalog</small>
+                                </a>
+                                <div class="slide__description">
+                                    <small class="slide__subtitle">Новое поступление</small>
+                                    <span class="slide__title">Лучшие товары от компании Dell</span>
+                                    <a class="slide__button button" href="#">
+                                        <div class="button__circle">
+                                            <img class="button__arrow" src="./img/arrow.svg">
+                                        </div>
+                                        <span class="button__title">Подробнее</span>
+                                    </a>
+                                </div>
+                                <div class="slide__img">
+                                    <img src="./img/slider-image1.png" alt="">
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+                <button class="slider-container__slider-next"><img src="./img/slider-arrow.svg" alt=""></button>
+            </div>
+        </div>
+    </header>
+    <!-- ------------------CATEGORIES------------------ -->
+    <section class="categories">
+        <div class="categories__container container">
+            <article class="category category-main">
+                <span class="category-main__title">Каталог товаров от Dell</span>
+                <p class="category-main__description">Наша компания является зарегистрированным и официальным партнером Dell в России</p>
+                <a class="category-main__button button" href="#">
+                    <div class="button__circle">
+                        <img class="button__arrow" src="./img/arrow.svg">
+                    </div>
+                    <span class="button__title">В каталог</span>
+                </a>
+            </article>
+            <article class="category">
+                <div class="category__number">01</div>
+                <img class="category__img" src="./img/catalog-image1.png" alt="Ноутбуки">
+                <div class="category__description">
+                    <small class="category__subtitle">105 товаров</small>
+                    <span class="category__title">Ноутбуки</span>
+                </div>
+            </article>
+            <article class="category">
+                <div class="category__number">02</div>
+                <img class="category__img" src="./img/catalog-image2.png" alt="персональные компьютеры">
+                <div class="category__description">
+                    <small class="category__subtitle">65 товаров</small>
+                    <span class="category__title">Персональные компьютеры</span>
+                </div>
+            </article>
+            <article class="category">
+                <div class="category__number">03</div>
+                <img class="category__img" src="./img/catalog-image3.png" alt="Серверы">
+                <div class="category__description">
+                    <small class="category__subtitle">13 товаров</small>
+                    <span class="category__title">Серверы</span>
+                </div>
+            </article>
+            <article class="category">
+                <div class="category__number">04</div>
+                <img class="category__img" src="./img/catalog-image4.png" alt="Dell EMC">
+                <div class="category__description">
+                    <small class="category__subtitle">2345 товаров</small>
+                    <span class="category__title">Dell EMC</span>
+                </div>
+            </article>
+            <article class="category">
+                <div class="category__number">05</div>
+                <img class="category__img" src="./img/catalog-image5.png" alt="Запасные части к Dell EMC">
+                <div class="category__description">
+                    <small class="category__subtitle">195 товаров</small>
+                    <span class="category__title">Запасные части к Dell EMC</span>
+                </div>
+            </article>
+        </div>
+    </section>
+    <!-- ------------------BENEFITS------------------ -->
+    <section class="benefits">
+        <span class="benefits__bg">best <br/>quality</span>
+        <div class="benefits__container container">
+            <div class="benefits__main">
+                <img class="benefits__img" src="./img/benefits-img.png">
+                <div class="benefits__description">
+                    <span class="benefits__title">Наши преимущества</span>
+                    <p class="benefits__subtitle"> Оптимизация мощностей (расходов, социальных выплат и т.п.) позволили компании на 4,7% понизить цены по сравнению с конкурентами</p>
+                    <a class="benefits__button button" href="#">
+                        <div class="button__circle">
+                            <img class="button__arrow" src="./img/arrow.svg">
+                        </div>
+                        <span class="button__title">Оставить заявку</span>
+                    </a>
+                </div>
+            </div>
+            <div class="benefits__articles">
+                <article class="benefit">
+                    <img class="benefit__forbg" src="./img/forbg.svg" alt="">
+                    <div class="benefit__img">
+                        <img src="./img/benefit-image1.svg" alt="">
+                    </div>
+                    <span class="benefit__title">Самые выгодные <br/>и низкие цены</span>
+                    <small class="benefit__subtitle">В наличии широкий ассортимент, <br/>а также доступные цены <br/>на ноутбуки Dell</small>
+                </article>
+                <article class="benefit">
+                    <img class="benefit__forbg" src="./img/forbg.svg" alt="">
+                    <div class="benefit__img">
+                        <img src="./img/benefit-image2.svg" alt="">
+                    </div>
+                    <span class="benefit__title">Авторизованный сервисный центр DELL</span>
+                    <small class="benefit__subtitle">Сертифицированный сервисный центр по ремонту техники Dell в России и странах СНГ</small>
+                </article>
+                <article class="benefit">
+                    <img class="benefit__forbg" src="./img/forbg.svg" alt="">
+                    <div class="benefit__img">
+                        <img src="./img/benefit-image3.svg" alt="">
+                    </div>
+                    <span class="benefit__title">Высокий уровень технической экспертизы</span>
+                    <small class="benefit__subtitle">Мы прошли аттестацию в виде тестирования, где показали <br/>высокий уровень знаний</small>
+                </article>
+                <article class="benefit">
+                    <img class="benefit__forbg" src="./img/forbg.svg" alt="">
+                    <div class="benefit__img">
+                        <img src="./img/benefit-image4.svg" alt="">
+                    </div>
+                    <span class="benefit__title">Официальный партнер DELL</span>
+                    <small class="benefit__subtitle">Официальный поставщик <br/>продукции DELL в России <br/>и странах СНГ</small>
+                </article>
+            </div>
+        </div>
+    </section>
+    <!-- ------------------NEWS------------------ -->
+    <section class="news">
+        <div class="news__container container">
+            <div class="news__main">
+                <div class="news__description">
+                    <span class="news__title">Последние новости</span>
+                    <p class="news__subtitle">Вы можете посмотреть ещё больше интересных новостей и узнать о последних новинках, перейдя по кнопке</p>
+                </div>
+                <a class="news__button button" href="#">
+                    <div class="button__circle">
+                        <img class="button__arrow" src="./img/arrow.svg">
+                    </div>
+                    <span class="button__title">Все новости</span>
+                </a>
+            </div>
+            <div class="news__articles">
+                <article class="new">
+                    <div class="new__date">
+                        <small class="new__day">11</small>
+                        <small class="new__month">июля</small>
+                    </div>
+                    <div class="new__container">
+                        <img class="new__img" src="./img/new-image1.png" alt="new">
+                        <div class="new__description">
+                        <img class="new__bg" src="./img/new-bg.svg">
+                        <div class="new__bg-button">
+                            <a class="new__button button" href="#">
+                                <div class="new__button-circle button__circle">
+                                    <img class="button__arrow" src="./img/arrow.svg">
+                                </div>
+                            </a>
+                        </div>
+                        <div class="new__text">
+                            <span class="new__title">GE использует технологии Dell</span>
+                            <small class="new__subtitle">Вы можете посмотреть еще больше интересных</small>
+                        </div>
+                        </div>
+                    </div>
+                </article>
+                <article class="new">
+                    <div class="new__date">
+                        <small class="new__day">11</small>
+                        <small class="new__month">июля</small>
+                    </div>
+                    <div class="new__container">
+                        <img class="new__img" src="./img/new-image2.png" alt="new">
+                        <div class="new__description">
+                        <img class="new__bg" src="./img/new-bg.svg">
+                        <div class="new__bg-button">
+                            <a class="new__button button" href="#">
+                                <div class="new__button-circle button__circle">
+                                    <img class="button__arrow" src="./img/arrow.svg">
+                                </div>
+                            </a>
+                        </div>
+                        <div class="new__text">
+                            <span class="new__title">GE использует технологии Dell</span>
+                            <small class="new__subtitle">Вы можете посмотреть еще больше интересных</small>
+                        </div>
+                        </div>
+                    </div>
+                </article>
+                <article class="new">
+                    <div class="new__date">
+                        <small class="new__day">11</small>
+                        <small class="new__month">июля</small>
+                    </div>
+                    <div class="new__container">
+                        <img class="new__img" src="./img/new-image3.png" alt="new">
+                        <div class="new__description">
+                        <img class="new__bg" src="./img/new-bg.svg">
+                        <div class="new__bg-button">
+                            <a class="new__button button" href="#">
+                                <div class="new__button-circle button__circle">
+                                    <img class="button__arrow" src="./img/arrow.svg">
+                                </div>
+                            </a>
+                        </div>
+                        <div class="new__text">
+                            <span class="new__title">GE использует технологии Dell</span>
+                            <small class="new__subtitle">Вы можете посмотреть еще больше интересных</small>
+                        </div>
+                        </div>
+                    </div>
+                </article>
+                <article class="new">
+                    <div class="new__date">
+                        <small class="new__day">11</small>
+                        <small class="new__month">июля</small>
+                    </div>
+                    <div class="new__container">
+                        <img class="new__img" src="./img/new-image4.png" alt="new">
+                        <div class="new__description">
+                        <img class="new__bg" src="./img/new-bg.svg">
+                        <div class="new__bg-button">
+                            <a class="new__button button" href="#">
+                                <div class="new__button-circle button__circle">
+                                    <img class="button__arrow" src="./img/arrow.svg">
+                                </div>
+                            </a>
+                        </div>
+                        <div class="new__text">
+                            <span class="new__title">GE использует технологии Dell</span>
+                            <small class="new__subtitle">Вы можете посмотреть еще больше интересных</small>
+                        </div>
+                        </div>
+                    </div>
+                </article>
+                <article class="new">
+                    <div class="new__date">
+                        <small class="new__day">11</small>
+                        <small class="new__month">июля</small>
+                    </div>
+                    <div class="new__container">
+                        <img class="new__img" src="./img/new-image5.png" alt="new">
+                        <div class="new__description">
+                        <img class="new__bg" src="./img/new-bg.svg">
+                        <div class="new__bg-button">
+                            <a class="new__button button" href="#">
+                                <div class="new__button-circle button__circle">
+                                    <img class="button__arrow" src="./img/arrow.svg">
+                                </div>
+                            </a>
+                        </div>
+                        <div class="new__text">
+                            <span class="new__title">GE использует технологии Dell</span>
+                            <small class="new__subtitle">Вы можете посмотреть еще больше интересных</small>
+                        </div>
+                        </div>
+                    </div>
+                </article>
+                <article class="new">
+                    <div class="new__date">
+                        <small class="new__day">11</small>
+                        <small class="new__month">июля</small>
+                    </div>
+                    <div class="new__container">
+                        <img class="new__img" src="./img/new-image6.png" alt="new">
+                        <div class="new__description">
+                        <img class="new__bg" src="./img/new-bg.svg">
+                        <div class="new__bg-button">
+                            <a class="new__button button" href="#">
+                                <div class="new__button-circle button__circle">
+                                    <img class="button__arrow" src="./img/arrow.svg">
+                                </div>
+                            </a>
+                        </div>
+                        <div class="new__text">
+                            <span class="new__title">GE использует технологии Dell</span>
+                            <small class="new__subtitle">Вы можете посмотреть еще больше интересных</small>
+                        </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+    <!-- ------------------FORM------------------ -->
+    <section class="form">
+        <div class="form__bg-color"></div>
+        <span class="form__bg">our contacts</span>
+        <div class="form__container container">
+            <div class="form__left">
+                <span class="form__title">Наши контакты</span>
+                <small class="form__subtitle">Вы можете связаться с нашим онлайн-консультантом</small>
+                <div class="form__contact form-contact">
+                    <div class="form-contact__icon"><img src="./img/form-contact1.svg"></div>
+                    <div class="form-contact__description">
+                        <small class="form-contact__title">Адрес</small>
+                        <span class="form-contact__info">Москва, ул. 3-я Хорошевская, дом 2, строение 1</span>
+                    </div>
+                </div>
+                <div class="form__contact form-contact">
+                    <div class="form-contact__icon"><img src="./img/form-contact2.svg"></div>
+                    <div class="form-contact__description">
+                        <small class="form-contact__title">E-mail</small>
+                        <span class="form-contact__info">dell_ru@gmail.com</span>
+                    </div>
+                </div>
+                <div class="form__contact form-contact">
+                    <div class="form-contact__icon"><img src="./img/form-contact3.svg"></div>
+                    <div class="form-contact__description">
+                        <small class="form-contact__title">Телефон</small>
+                        <span class="form-contact__info">+7 495 737-06-01 <br/>+7 495 737-06-01</span>
+                    </div>
+                </div>
+                <div class="form__contact">
+                    <a href="#"><img src="./img/facebook.svg" alt=""></a>
+                    <a href="#"><img src="./img/viber.svg" alt=""></a>
+                </div>
+            </div>
+            <div class="form__right">
+                <span class="form__title form__title_light">Оставьте заявку</span>
+                <small class="form__subtitle form__subtitle_light">Оставьте свой номер, и мы перезвоним Вам.</small>
+                <form class="form__input" action="#">
+                    <div class="form__field field">
+                        <small class="field__title">Ваше имя</small>
+                        <input class="field__block" type="text" name="Name" required>
+                    </div>
+                    <div class="form__field field">
+                        <small class="field__title">Номер телефона</small>
+                        <input class="field__block" type="text" name="Name" required>
+                    </div>
+                    <div class="form__field field">
+                        <small class="field__title">Комментарий</small>
+                        <textarea class="field__block field__block_message" name="Message" id="" required></textarea>
+                    </div>
+                </form>
+                <button class="form__button button" type="submit">
+                    <div class="button__circle">
+                        <img class="button__arrow" src="./img/arrow.svg">
+                    </div>
+                    <span class="button__title button__title_light">Заказать</span>
+                </button>
+            </div>
+        </div>
+        <div class="form__img"><img src="./img/form-phone.png"></div>
+    </section>
+    <!-- ------------------FOOTER------------------ -->
+    <footer class="footer">
+    <span class="footer__bg">DELL</span>
+    <div class="footer__container container">
+        <div class="footer__main-info">
+            <div class="footer__main">
+                <a class="footer__logo" href="#">
+                    <img  class="footer__img" src="./img/logo-footer.png" alt="logo">
+                </a>
+            </div>
+            <div class="footer__articles">
+                <div class="footer__article">
+                    <span class="footer__title">Каталог</span>
+                    <ul class="footer__permalinks">
+                        <li class="footer__li"><a class="footer__a" href="#">Ноутбуки</a></li>
+                        <li class="footer__li"><a class="footer__a" href="#">Персональные компьютеры</a></li>
+                        <li class="footer__li"><a class="footer__a" href="#">Серверы</a></li>
+                        <li class="footer__li"><a class="footer__a" href="#">Dell EMC</a></li>
+                        <li class="footer__li"><a class="footer__a" href="#">Запасные части к Dell EMC</a></li>
+                    </ul>
+                </div>
+                <div class="footer__article">
+                    <span class="footer__title">Личный кабинет</span>
+                    <ul class="footer__permalinks">
+                        <li class="footer__li"><a class="footer__a" href="#">Профиль</a></li>
+                        <li class="footer__li"><a class="footer__a" href="#">История заказов</a></li>
+                        <li class="footer__li"><a class="footer__a" href="#">SMS-уведомления</a></li>
+                        <li class="footer__li"><a class="footer__a" href="#">Избранное</a></li>
+                        <li class="footer__li"><a class="footer__a" href="#">Сравнение товаров</a></li>
+                    </ul>
+                </div>
+                <div class="footer__article">
+                    <span class="footer__title">Помощь</span>
+                    <ul class="footer__permalinks">
+                        <li class="footer__li"><a class="footer__a" href="#">Доставка и оплата</a></li>
+                        <li class="footer__li"><a class="footer__a" href="#">Контакты</a></li>
+                        <li class="footer__li"><a class="footer__a" href="#">FAQ</a></li>
+                        <li class="footer__li"><a class="footer__a" href="#">Наш АСЦ</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer__contacts">
+            <div class="footer__contact">
+                <span class="footer__contact-title">Адрес</span>
+                <small class="footer__contact-info">Москва, ул. 3-я Хорошевская, дом 2, строение 1</small>
+            </div>
+            <div class="footer__contact">
+                <span class="footer__contact-title">Телефон</span>
+                <small class="footer__contact-info">+7 495 737-06-01, +7 495 737-06-01</small>
+            </div>
+            <div class="footer__contact">
+                <span class="footer__contact-title">E-mail</span>
+                <small class="footer__contact-info">dell_ru@gmail.com</small>
+            </div>
+            <div class="footer__contact">
+                <a href="#"><img src="./img/facebook.svg"></a>
+                <a href="#"><img src="./img/viber.svg"></a>
+            </div>
+        </div>
+    </div>
+    </footer>
+    <script src="./js/main.js"></script>
+</body>
+</html>
