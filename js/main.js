@@ -176,23 +176,23 @@ function validateInputName() {
         document.getElementById("nameInput").value = ""; // очистка поля ввода
     }
   }
-// function validateInputNumber() {
-//     const inputNumber = document.getElementById("nameInput").value;
-//     const patternNumber = /^[0-9_]{7,16}$/; // паттерн для ввода
-//     allField[1].querySelector('.field__title').style.color= '#F2F2F2';
-//     allField[1].querySelector('.field__block').style.borderColor= 'rgba(242, 242, 242, 0.5)';
-//     if (!patternNumber.test(inputNumber)) {
-//         allField[1].querySelector('.field__title').style.color= '#BE2121';
-//         allField[1].querySelector('.field__block').style.borderColor= '#BE2121';
-//         document.getElementById("numberInput").value = ""; // очистка поля ввода
-//     }
-//   }
+function validateInputNumber() {
+    const inputNumber = document.getElementById("nameInput").value;
+    const patternNumber = /^[a-zA-Z0-9_]{7,16}$/; // паттерн для ввода
+    allField[1].querySelector('.field__title').style.color= '#F2F2F2';
+    allField[1].querySelector('.field__block').style.borderColor= 'rgba(242, 242, 242, 0.5)';
+    if (!patternNumber.test(inputNumber)) {
+        allField[1].querySelector('.field__title').style.color= '#BE2121';
+        allField[1].querySelector('.field__block').style.borderColor= '#BE2121';
+        document.getElementById("numberInput").value = ""; // очистка поля ввода
+    }
+  }
 function validateInputMessage() {
     const inputMessage = document.getElementById("messageInput").value;
 
     allField[2].querySelector('.field__title').style.color= '#F2F2F2';
     allField[2].querySelector('.field__block').style.borderColor= 'rgba(242, 242, 242, 0.5)';
-    const pattern = /^[a-zA-Z0-9_]{3,100}$/; // паттерн для ввода
+    const pattern = /^[a-zA-Z0-9_]{0,100}$/; // паттерн для ввода
     if (!pattern.test(inputMessage)) {
         allField[2].querySelector('.field__title').style.color= '#BE2121';
         allField[2].querySelector('.field__block').style.borderColor= '#BE2121';

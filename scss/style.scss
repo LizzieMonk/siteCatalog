@@ -1414,7 +1414,8 @@ $transition: all 400ms ease;
     top: 5.5rem;
     // .header__container
     &__container {
-        height: 786px;
+        // height: 786px;
+        height: 593px;
         width: 375px;
         // background: aqua;
     }
@@ -1472,7 +1473,8 @@ $transition: all 400ms ease;
 .slider {
     overflow: hidden;
     width: 375px;
-    height: 786px;
+    height: 593px;
+    // height: 786px;
     // .slider__shadow
     &__shadow{
         background: $color-light;
@@ -1496,8 +1498,41 @@ $transition: all 400ms ease;
     &__slide {
         transition: $transition;
         height: 593px;
-        width: 1411px;
+        width: 375px;
         display: flex;
+        &:nth-child(3),&:nth-child(4),&:nth-child(5),&:nth-child(6){
+            display: none;
+        }
+        &:nth-child(2){
+            display: none;
+            .slide{
+                flex-direction: row;
+                .slide__scroll,.slide__subtitle,.slide__button{
+                    display: none;
+                }
+            }
+                background: red;
+            .slide__img{
+                display: none;
+                img{
+                height: 166px;
+                width: 252px;
+                }
+            }
+            .slide__title{
+                margin-top: 5px;
+                width: 250px;
+                // background: #000;
+                display: block;
+                font-family: 'Roboto';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 30px;
+                line-height: 35px;
+                color: $color-dark-text;
+                position: relative;
+            }
+        }
     }
 }
 .slide {
