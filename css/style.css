@@ -1063,7 +1063,7 @@ h1, h2, h3, h4, h5, h6 {
   padding-top: 10px;
 }
 
-@media screen and (max-width: 375px) {
+@media all and (max-width: 375px) {
   .container {
     width: 345px;
   }
