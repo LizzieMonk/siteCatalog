@@ -970,10 +970,9 @@ $transition: all 400ms ease;
     &__img {
         position: absolute;
         top: 142px;
-        left: 751px;
+        // left: 751px;
+        left: 39.2%;
         z-index: 4;
-        // margin-right: -50%;
-        // transform: translate(-50%,-50%);
     }
 }
 .field {
