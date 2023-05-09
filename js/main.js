@@ -26,25 +26,24 @@ allSlides[1].querySelector('.slide__button').style.display= 'none';
 allSlides[1].querySelector('.slide__title').style.fontSize= '25px';
 allSlides[1].querySelector('.slide__title').style.lineHeight= '32px';
 allSlides[1].querySelector('.slide__title').style.top= '55px';
-allSlides[1].querySelector('.slide__title').style.left= '-237px';
+allSlides[1].querySelector('.slide__title').style.left= '-65px'; //
 allSlides[1].querySelector('.slide__title').style.width= '80px';
-allSlides[1].querySelector('.slider__shadow').style.opacity= '0.85';
+allSlides[1].querySelector('.slide__img').style.opacity= '0.5';
 allSlides[1].querySelector('.slide__img').style.top= '-250px';
 allSlides[1].querySelector('.slide__img').style.left= '-80px';
 
-
 document.querySelector('.slider-container__slider-next').addEventListener('click', function(){
-    offset = offset +1411;
-    if(offset==1411){
+    offset = offset +1151;
+    if(offset==1151){
         allSlides[2].querySelector('.slide__scroll').style.display= 'none';
         allSlides[2].querySelector('.slide__subtitle').style.display= 'none';
         allSlides[2].querySelector('.slide__button').style.display= 'none';
         allSlides[2].querySelector('.slide__title').style.fontSize= '25px';
         allSlides[2].querySelector('.slide__title').style.lineHeight= '32px';
         allSlides[2].querySelector('.slide__title').style.top= '55px';
-        allSlides[2].querySelector('.slide__title').style.left= '-237px';
+        allSlides[2].querySelector('.slide__title').style.left= '-65px';
         allSlides[2].querySelector('.slide__title').style.width= '80px';
-        allSlides[2].querySelector('.slider__shadow').style.opacity= '0.85';
+        allSlides[2].querySelector('.slide__img').style.opacity= '0.5';
         allSlides[2].querySelector('.slide__img').style.top= '0px';
         allSlides[2].querySelector('.slide__img').style.left= '-80px';
 
@@ -57,20 +56,20 @@ document.querySelector('.slider-container__slider-next').addEventListener('click
         allSlides[1].querySelector('.slide__title').style.top= '0px';
         allSlides[1].querySelector('.slide__title').style.left= '0px';
         allSlides[1].querySelector('.slide__title').style.width= '400px';
-        allSlides[1].querySelector('.slider__shadow').style.opacity= '0';
+        allSlides[1].querySelector('.slide__img').style.opacity= '1';
         allSlides[1].querySelector('.slide__img').style.top= '0px';
-        allSlides[1].querySelector('.slide__img').style.left= '180px';
+        allSlides[1].querySelector('.slide__img').style.left= '10px';
     }
-    else if(offset==2822){
+    else if(offset==2302){
         allSlides[3].querySelector('.slide__scroll').style.display= 'none';
         allSlides[3].querySelector('.slide__subtitle').style.display= 'none';
         allSlides[3].querySelector('.slide__button').style.display= 'none';
         allSlides[3].querySelector('.slide__title').style.fontSize= '25px';
         allSlides[3].querySelector('.slide__title').style.lineHeight= '32px';
         allSlides[3].querySelector('.slide__title').style.top= '55px';
-        allSlides[3].querySelector('.slide__title').style.left= '-237px';
+        allSlides[3].querySelector('.slide__title').style.left= '-65px';
         allSlides[3].querySelector('.slide__title').style.width= '80px';
-        allSlides[3].querySelector('.slider__shadow').style.opacity= '0.85';
+        allSlides[3].querySelector('.slide__img').style.opacity= '0.5';
         allSlides[3].querySelector('.slide__img').style.top= '0px';
         allSlides[3].querySelector('.slide__img').style.left= '-80px';
 
@@ -83,21 +82,21 @@ document.querySelector('.slider-container__slider-next').addEventListener('click
         allSlides[2].querySelector('.slide__title').style.top= '0px';
         allSlides[2].querySelector('.slide__title').style.left= '0px';
         allSlides[2].querySelector('.slide__title').style.width= '400px';
-        allSlides[2].querySelector('.slider__shadow').style.opacity= '0';
+        allSlides[2].querySelector('.slide__img').style.opacity= '1';
         allSlides[2].querySelector('.slide__img').style.top= '70px';
-        allSlides[2].querySelector('.slide__img').style.left= '280px';
+        allSlides[2].querySelector('.slide__img').style.left= '110px';
 
     }
-    else if(offset==4233){
+    else if(offset==3453){
         allSlides[4].querySelector('.slide__scroll').style.display= 'none';
         allSlides[4].querySelector('.slide__subtitle').style.display= 'none';
         allSlides[4].querySelector('.slide__button').style.display= 'none';
         allSlides[4].querySelector('.slide__title').style.fontSize= '25px';
         allSlides[4].querySelector('.slide__title').style.lineHeight= '32px';
         allSlides[4].querySelector('.slide__title').style.top= '55px';
-        allSlides[4].querySelector('.slide__title').style.left= '-237px';
+        allSlides[4].querySelector('.slide__title').style.left= '-65px';
         allSlides[4].querySelector('.slide__title').style.width= '80px';
-        allSlides[4].querySelector('.slider__shadow').style.opacity= '0.85';
+        allSlides[4].querySelector('.slide__img').style.opacity= '0.5';
         allSlides[4].querySelector('.slide__img').style.top= '0px';
         allSlides[4].querySelector('.slide__img').style.left= '-80px';
 
@@ -110,21 +109,21 @@ document.querySelector('.slider-container__slider-next').addEventListener('click
         allSlides[3].querySelector('.slide__title').style.top= '0px';
         allSlides[3].querySelector('.slide__title').style.left= '0px';
         allSlides[3].querySelector('.slide__title').style.width= '400px';
-        allSlides[3].querySelector('.slider__shadow').style.opacity= '0';
+        allSlides[3].querySelector('.slide__img').style.opacity= '1';
         allSlides[3].querySelector('.slide__img').style.top= '70px';
-        allSlides[3].querySelector('.slide__img').style.left= '280px';
+        allSlides[3].querySelector('.slide__img').style.left= '110px';
 
     }
-    else if(offset==5644){
+    else if(offset==4604){
         allSlides[5].querySelector('.slide__scroll').style.display= 'none';
         allSlides[5].querySelector('.slide__subtitle').style.display= 'none';
         allSlides[5].querySelector('.slide__button').style.display= 'none';
         allSlides[5].querySelector('.slide__title').style.fontSize= '25px';
         allSlides[5].querySelector('.slide__title').style.lineHeight= '32px';
         allSlides[5].querySelector('.slide__title').style.top= '55px';
-        allSlides[5].querySelector('.slide__title').style.left= '-237px';
+        allSlides[5].querySelector('.slide__title').style.left= '-65px';
         allSlides[5].querySelector('.slide__title').style.width= '80px';
-        allSlides[5].querySelector('.slider__shadow').style.opacity= '0.85';
+        allSlides[5].querySelector('.slide__img').style.opacity= '0.5';
         allSlides[5].querySelector('.slide__img').style.top= '0px';
         allSlides[5].querySelector('.slide__img').style.left= '-80px';
 
@@ -137,12 +136,12 @@ document.querySelector('.slider-container__slider-next').addEventListener('click
         allSlides[4].querySelector('.slide__title').style.top= '0px';
         allSlides[4].querySelector('.slide__title').style.left= '0px';
         allSlides[4].querySelector('.slide__title').style.width= '400px';
-        allSlides[4].querySelector('.slider__shadow').style.opacity= '0';
+        allSlides[4].querySelector('.slide__img').style.opacity= '1';
         allSlides[4].querySelector('.slide__img').style.top= '70px';
-        allSlides[4].querySelector('.slide__img').style.left= '280px';
+        allSlides[4].querySelector('.slide__img').style.left= '110px';
 
     }
-    else if (offset>5644) {
+    else if (offset>4604) {
         offset=0;
         allSlides[1].querySelector('.slide__scroll').style.display= 'none';
         allSlides[1].querySelector('.slide__subtitle').style.display= 'none';
@@ -150,17 +149,16 @@ document.querySelector('.slider-container__slider-next').addEventListener('click
         allSlides[1].querySelector('.slide__title').style.fontSize= '25px';
         allSlides[1].querySelector('.slide__title').style.lineHeight= '32px';
         allSlides[1].querySelector('.slide__title').style.top= '55px';
-        allSlides[1].querySelector('.slide__title').style.left= '-237px';
+        allSlides[1].querySelector('.slide__title').style.left= '-65px';
         allSlides[1].querySelector('.slide__title').style.width= '80px';
-        allSlides[1].querySelector('.slider__shadow').style.opacity= '0.85';
-        allSlides[1].querySelector('.slide__img').style.top= '0px';
+        allSlides[1].querySelector('..slide__img').style.opacity= '0.5';
+        allSlides[1].querySelector('.slide__img').style.top= '-250px';
         allSlides[1].querySelector('.slide__img').style.left= '-80px';
     }
     sliderLine.style.right = offset+'px';
 })
 
 //verify input
-
 
 const allField = document.querySelectorAll('.form__field');
 

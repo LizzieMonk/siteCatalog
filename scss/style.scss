@@ -17,11 +17,19 @@ $color-benefit-text: #B7B7B7;
 $color-footer-line: #E5E5E5;
 $color-bg-form: #EEEEEE;
 
-
 $container-width-lg: 1400px;
 $container-width-sm: 345px;
 
 $transition: all 400ms ease;
+
+@mixin font ($fs, $fw, $fz, $lh, $tt, $c){
+    font-style: $fs;
+    font-weight: $fw;
+    font-size: $fz;
+    line-height: $lh;
+    text-transform: $tt;
+    color: $c;
+}
 
 
 /*--------------------NAVBAR--------------------*/
@@ -53,7 +61,6 @@ $transition: all 400ms ease;
     display: flex;
     flex-direction: row;
     align-items: center;
-
     // .menu_left
     &_left {
         gap: 46px;
@@ -70,10 +77,12 @@ $transition: all 400ms ease;
             // transition: $transition;
             &:hover{
                 .circle{
-                    border: 1px solid $color-blue;
+                    background: transparent;
+                    // border: 0.5px solid $color-dark-text;
                 }
                 .profile .circle{
-                    border: 1px solid transparent;
+                    background: $color-light;
+                    // border: 1px solid transparent;
                 }
                 .profile{
                     display: block;
@@ -92,12 +101,8 @@ $transition: all 400ms ease;
     // .menu__a
     &__a {
         font-family: 'Roboto', sans-serif;
-        font-style: normal;
-        font-weight: 400;
-        font-size: 15px;
-        line-height: 18px;
-        text-transform: uppercase;
-        color: $color-dark-text;
+        @include font(normal, 400, 15px, 18px, uppercase, $color-dark-text);
+        transition: $transition;
         &:hover{
             color: $color-blue;
         }
@@ -112,8 +117,10 @@ $transition: all 400ms ease;
     justify-content: center;
     align-items: center;
     position: relative;
+    transition: $transition;
     &:hover{
-        border: 1px solid $color-blue;
+        background: transparent;
+        // border: 0.5px solid $color-dark-text;
     }
     // .circle__counter
     &__counter{
@@ -131,11 +138,7 @@ $transition: all 400ms ease;
     // .circle__counter-text
     &__counter-text {
         font-family: 'Roboto';
-        font-style: normal;
-        font-weight: 700;
-        font-size: 12px;
-        line-height: 14px;
-        color: $color-white;
+        @include font(normal, 700, 12px, 14px, none, $color-white);
     }
 }
 .profile {
@@ -148,6 +151,7 @@ $transition: all 400ms ease;
     left: 50%;
     margin-right: -50%;
     transform: translate(-50%,-50%);
+    transition: $transition;
     &:hover{
         display: block;
     }
@@ -184,11 +188,7 @@ $transition: all 400ms ease;
     // .profile__text
     &__text {
         font-family: 'Roboto';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 20px;
-        line-height: 150%;
-        color: $color-black;
+        @include font(normal, 400, 20px, 150%, none, $color-black);
     }
     // .profile__a
     &__a {
@@ -199,7 +199,6 @@ $transition: all 400ms ease;
             .profile__text{
                 color: $color-blue;
             }
-            
         }
     }
 }
@@ -208,60 +207,74 @@ $transition: all 400ms ease;
 .header {
     position: relative;
     top: 7.7rem;
-    // background: aqua;
-    // .header__container
-    &__container {
+    // .header__bg-color
+    &__bg-color{
+        background: $color-bg-grey;
+        width: 1411px;
         height: 683px;
-        width: 1920px;
-        // background: aqua;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
     }
-}
-.slider-container {
-    width: 1920px;
-    position: relative;
-    background: $color-bg-grey;
-    // .slider-container__bg
+    //.header__bg
     &__bg{
         font-family: 'Rubik One';
         font-style: normal;
         font-weight: 400;
-        font-size: 270px;
+        font-size: 280px;
         line-height: 92.69%;
         text-transform: uppercase;
         background: linear-gradient(0deg, $color-bg-form -45.37%, rgba(238, 238, 238, 0) 95.17%), linear-gradient(89.91deg, rgba(255, 255, 255, 0.85) 11.75%, rgba(255, 255, 255, 0) 162.35%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
-        // text-fill-color: transparent;
-        opacity: 0.7;
+        opacity: 1;
         position: absolute;
         top: 80px;
-        left: 250px;
+        left: 240px;
+        z-index: 2;
+    }
+    //. header__shadow
+    &__shadow{
+        background: $color-light;
+        width: 1920px - 1411px;
+        height: 683px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        opacity: 0.85;
         z-index: 1;
     }
+    // .header__container
+    &__container {
+        height: 683px;
+        z-index: 3;
+        // width: 100%;
+    }
+}
+.slider-container {
+    width: 1400px;
+    position: relative;
     // .slider-container__slider
     &__slider {
         position: relative;
         z-index: 2;
         background: transparent;
-        // margin: 0px auto;
-        // overflow: hidden;
     }
     // .slider-container__slider-next
     &__slider-next {
         padding: 20px 10px 41px 10px;
         height: 21px;
-        // width: 40px;
         border: none;
         background-color: transparent;
-        // margin: 0 auto;
         display: inline-block;
         position: absolute;
-        right: 355px;
+        right: 95px;
         top: 475px;
         z-index: 10;
+        transition: $transition;
         img{
-            // background: red;
         }
         &:hover{
             transform: scale(1.1);
@@ -270,57 +283,48 @@ $transition: all 400ms ease;
 }
 .slider {
     overflow: hidden;
-    width: 1920px;
+    width: 1400px;
     height: 683px;
-    // .slider__shadow
-    &__shadow{
-        background: $color-light;
-        opacity: 0;
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        z-index: 3;
-    }
     // .slider__line
     &__line {
-        width: 9600px;
+        width: 6906px;
         height: 683px;
         display: flex;
         position: relative;
-        // transition: all ease 1s;
         transition: $transition;
     }
     // .slider__slide
     &__slide {
         transition: $transition;
         height: 683px;
-        width: 1411px;
-        display: flex;
-        // justify-content: center;
-        // align-items: center;
-        // border: 1px solid red;
+        width: 1151px;
     }
 }
 .slide {
     display: flex;
     flex-direction: row;
+    transition: $transition;
     // .slide__scroll
     &__scroll {
-        // background: #000;
         display: flex;
         flex-direction: column-reverse;
         gap: 64px;
         position: relative;
-        left: 214px;
-        bottom: 159px;
+        width: 25px;
+        bottom: 160px;
+        transition: $transition;
     }
     // .slide__scroll-icon
     &__scroll-icon {
         display: block;
+        // background: aquamarine;
+        width: 25px;
     }
     // .slide__scroll-text
     &__scroll-text {
+        // background: red;
         display: block;
+        width: max-content;
         font-family: 'Roboto';
         font-style: normal;
         font-weight: 300;
@@ -328,17 +332,19 @@ $transition: all 400ms ease;
         line-height: 19px;
         color: $color-grey-text;
         transform: rotate(-90deg);
+        position: relative;
+        left: -44px;
     }
     // .slide__description
     &__description {
         position: relative;
-        left: 275px;
+        left: 105px;
         top: 250px;
         z-index: 3;
     }
     // .slide__subtitle
     &__subtitle {
-        // background: #000;
+        transition: $transition;
         display: inline-block;
         font-family: 'Roboto';
         font-style: normal;
@@ -351,7 +357,6 @@ $transition: all 400ms ease;
     &__title {
         margin-top: 15px;
         width: 400px;
-        // background: #000;
         display: block;
         font-family: 'Roboto';
         font-style: normal;
@@ -363,13 +368,13 @@ $transition: all 400ms ease;
     }
     // .slide__button
     &__button {
-        // background: #000;
-        margin-top: 60px;
+        transition: $transition;
+        margin-top: 62px;
     }
     // .slide__img
     &__img {
         position: relative;
-        left: 280px;
+        left: 110px;
         top: 70px;
     }
 }
@@ -390,7 +395,6 @@ $transition: all 400ms ease;
     border-radius: 20px;
     background: $color-bg-grey;
     // background: aquamarine;
-
     position: relative;
     transition: $transition;
     &:hover{
@@ -453,42 +457,26 @@ $transition: all 400ms ease;
     // .category__subtitle
     &__subtitle {
         font-family: 'Roboto';
-        font-style: normal;
-        font-weight: 300;
-        font-size: 18px;
-        line-height: 24px;
-        color: $color-grey-text;
+        @include font(normal, 300, 18px, 24px, none, $color-grey-text);
     }
     // .category__title
     &__title {
         font-family: 'Roboto';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 25px;
-        line-height: 150%;
-        color: $color-dark-text;
+        @include font(normal, 400, 25px, 150%, none, $color-dark-text);
     }
 }
 .category-main {
     // .category-main__title
     &__title {
         font-family: 'Roboto';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 50px;
-        line-height: 50px;
-        color: $color-dark-text;
+        @include font(normal, 400, 50px, 50px, none, $color-dark-text);
         display: inline-block;
         padding: 0 50px 0 0;
     }
     // .category-main__description
     &__description {
         font-family: 'Roboto';
-        font-style: normal;
-        font-weight: 300;
-        font-size: 18px;
-        line-height: 150%;
-        color: $color-grey-text;
+        @include font(normal, 300, 18px, 150%, none, $color-grey-text);
         padding: 29px 50px 0 0;
     }
     // .category-main__button
@@ -498,13 +486,10 @@ $transition: all 400ms ease;
     }
 }
 .button {
-    // display: inline-flex;
-    // align-items: center;
     display: inline-flex;
     flex-direction: row;
     align-items: center;
     transition: $transition;
-
     // .button__circle
     &__circle {
         width: 55px;
@@ -512,6 +497,7 @@ $transition: all 400ms ease;
         background: $color-blue;
         border-radius: 50%;
         position: relative;
+        transition: $transition;
     }
     // .button__arrow
     &__arrow {
@@ -525,18 +511,10 @@ $transition: all 400ms ease;
     // .button__title
     &__title {
         font-family: 'Roboto';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 30px;
-        color: $color-dark-text;
-
+        @include font(normal, 400, 16px, 30px, none, $color-dark-text);
+        transition: $transition;
         display: inline-block;
         margin: 0 12px;
-        // width: max-content;
-        // position: absolute;
-        // top: 15px;
-        // left: 66px;
         &_light {
             color: $color-white;
         }
@@ -602,22 +580,14 @@ $transition: all 400ms ease;
     // .benefits__title
     &__title {
         font-family: 'Roboto';
-        font-weight: 400;
-        font-style: normal;
-        font-size: 50px;
-        line-height: 50px;
-        color: $color-dark-text;
+        @include font(normal, 400, 50px, 50px, none, $color-dark-text);
         display: block;
         padding: 47px 0 0 0;
     }
     // .benefits__subtitle
     &__subtitle {
         font-family: 'Roboto';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 18px;
-        line-height: 150%;
-        color: $color-grey-text;
+        @include font(normal, 400, 18px, 150%, none, $color-grey-text);
         display: block;
         padding: 38px 41px 0 0;
     }
@@ -638,6 +608,10 @@ $transition: all 400ms ease;
     border-radius: 18px;
     background: $color-dark-text;
     position: relative;
+    transition: $transition;
+    &:hover{
+        transform: scale(0.9);
+    }
     // .benefit__forbg
     &__forbg {
         position: absolute;
@@ -656,25 +630,15 @@ $transition: all 400ms ease;
     }
     // .benefit__title
     &__title {
-        // font-family: 'Euclid Circular A';
         font-family: 'Euclid Circular A', sans-serif;
-        font-style: normal;
-        font-weight: 700;
-        font-size: 22px;
-        line-height: 28px;
-        color: $color-white;
+        @include font(normal, 700, 22px, 28px, none, $color-white);
         display: block;
         padding: 25px 0 0 30px;
-        // position: relative;
     }
     // .benefit__subtitle
     &__subtitle {
         font-family: 'Euclid Circular A', sans-serif;
-        font-style: normal;
-        font-weight: 300;
-        font-size: 16px;
-        line-height: 20px;
-        color: $color-benefit-text;
+        @include font(normal, 300, 16px, 20px, none, $color-benefit-text);
         display: block;
         padding: 15px 0 0 30px;
     }
@@ -693,7 +657,6 @@ $transition: all 400ms ease;
         flex-direction: row;
         justify-content: space-between;
         align-items:flex-start;
-        // padding: 0 0 100px 0;
     }
     // .news__description
     &__description {
@@ -701,25 +664,16 @@ $transition: all 400ms ease;
     // .news__title
     &__title {
     font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 50px;
-    line-height: 59px;
-    color: $color-dark-text;
+    @include font(normal, 400, 50px, 59px, none, $color-dark-text);
     display: block;
     }
     // .news__subtitle
     &__subtitle {
     font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 300;
-    font-size: 18px;
-    line-height: 150%;
-    color: $color-grey-text;
+    @include font(normal, 300, 18px, 150%, none, $color-grey-text);
     display: block;
     padding: 24px 0 68px 0;
     width: 80%;
-    // background: red;
     }
     // .news__button
     &__button {
@@ -758,22 +712,14 @@ $transition: all 400ms ease;
     // .new__day
     &__day{
         font-family: 'Roboto';
-        font-style: normal;
-        font-weight: 900;
-        font-size: 20px;
-        line-height: 23px;
+        @include font(normal, 900, 20px, 23px, none, $color-dark-text);
         text-align: center;
-        color: $color-dark-text;
     }
     // .new__month
     &__month{
         font-family: 'Roboto';
-        font-style: normal;
-        font-weight: 300;
-        font-size: 10px;
-        line-height: 12px;
+        @include font(normal, 300, 10px, 12px, none, $color-dark-text);
         text-align: center;
-        color: $color-dark-text;
     }
     // .new__container
     &__container{
@@ -791,18 +737,9 @@ $transition: all 400ms ease;
     }
     // .new__description
     &__description {
-        // background: url(../img/new-bg.svg);
-        // background: grey;
-        // border:1px solid red;
-        // display: flex;
-        // flex-direction: row;
-        // justify-content: space-between;
-        // position: absolute;
-        // bottom: 0;
     }
     // .new__bg
     &__bg {
-        // position: relative;
         z-index: 1;
         position: absolute;
         bottom:0;
@@ -810,8 +747,6 @@ $transition: all 400ms ease;
     // .new__bg-button
     &__bg-button{
         position: absolute;
-        // right: 20px;
-        // bottom: 55px;
         right: 24px;
         bottom: 60px;
         z-index: 2;
@@ -820,12 +755,19 @@ $transition: all 400ms ease;
         height: max-content;
         padding: 10px;
         border-radius: 50%;
+        transition: $transition;
+        &:hover{
+            right: 4px;
+            bottom: 40px;
+            padding: 30px;
+            .new__button-circle{
+                transform: scale(1.5);
+                background: $color-blue;
+            }
+        }
     }
     // .new__button
     &__button{
-        // position: absolute;
-        // background-color: red;
-        // z-index: 2;
     }
     // .new__button-circle
     &__button-circle{
@@ -836,28 +778,19 @@ $transition: all 400ms ease;
     // .new__text
     &__text {
         position: relative;
-        // position: absolute;
         z-index: 2;
     }
     // .new__title
     &__title {
         font-family: 'Roboto';
-        font-style: normal;
-        font-weight: 700;
-        font-size: 25px;
-        line-height: 130%;
-        color: $color-dark-text;
+        @include font(normal, 700, 25px, 130%, none, $color-dark-text);
         display: inline-block;
         margin: -17px 150px 0 30px;
     }
     // .new__subtitle
     &__subtitle {
         font-family: 'Roboto';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 150%;
-        color: $color-dark-text;
+        @include font(normal, 400, 14px, 150%, none, $color-dark-text);
         display: block;
         margin: 10px 30px;
     }
@@ -911,11 +844,7 @@ $transition: all 400ms ease;
     // .form__title
     &__title {
         font-family: 'Roboto';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 50px;
-        line-height: 50px;
-        color: $color-dark-text;
+        @include font(normal, 400, 50px, 50px, none, $color-dark-text);
         display: block;
         // .form__title_light
 			&_light {
@@ -925,11 +854,7 @@ $transition: all 400ms ease;
     // .form__subtitle
     &__subtitle {
         font-family: 'Roboto';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 150%;
-        color: $color-grey-text;
+        @include font(normal, 400, 16px, 150%, none, $color-grey-text);
         display: block;
         padding: 15px 0 50px 0;
         // .form__subtitle_light
@@ -986,11 +911,7 @@ $transition: all 400ms ease;
 	// .field__name-title
 	&__title {
         font-family: 'Roboto';
-        font-style: normal;
-        font-weight: 300;
-        font-size: 18px;
-        line-height: 24px;
-        color: $color-bg-grey;
+        @include font(normal, 300, 18px, 24px, none, $color-bg-grey);
         position: absolute;
         top: 7px;
         left: 15px;
@@ -1013,11 +934,7 @@ $transition: all 400ms ease;
         padding: 0 25px;
 
         font-family: 'Roboto';
-        font-style: normal;
-        font-weight: 300;
-        font-size: 18px;
-        line-height: 24px;
-        color: $color-white;
+        @include font(normal, 300, 18px, 24px, none, $color-white);
 	}
 }
 .form-contact {
@@ -1034,24 +951,15 @@ $transition: all 400ms ease;
     }
     // .form-contact__title
     &__title {
-        // background: aqua;
         font-family: 'Roboto';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 18px;
-        line-height: 24px;
-        color: $color-grey-text;
+        @include font(normal, 400, 18px, 24px, none, $color-grey-text);
         display: block;
         padding-bottom: 8px;
     }
     // .form-contact__info
     &__info {
         font-family: 'Roboto';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 22px;
-        line-height: 150%;
-        color: $color-dark-text;
+        @include font(normal, 400, 22px, 150%, none, $color-dark-text);
         display: inline-block;
     }
 }
@@ -1109,7 +1017,6 @@ $transition: all 400ms ease;
     }
     // .footer__img
     &__img {
-        // width: 112px;
     }
     // .footer__articles
     &__articles {
@@ -1127,12 +1034,7 @@ $transition: all 400ms ease;
     // .footer__title
     &__title {
         font-family: 'Roboto';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 25px;
-        line-height: 29px;
-        // text-align: right;
-        color: $color-dark-text
+        @include font(normal, 400, 25px, 29px, none, $color-dark-text);
     }
     // .footer__permalinks
     &__permalinks {
@@ -1145,12 +1047,7 @@ $transition: all 400ms ease;
     // .footer__a
     &__a {
         font-family: 'Roboto';
-        font-style: normal;
-        font-weight: 300;
-        font-size: 16px;
-        line-height: 19px;
-        // text-align: right;
-        color: $color-dark-text;
+        @include font(normal, 300, 16px, 19px, none, $color-dark-text);
     }
 
 	&__contacts {
@@ -1175,21 +1072,13 @@ $transition: all 400ms ease;
 	// .footer__contact-title
 	&__contact-title {
         font-family: 'Roboto';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 133.69%;
-        color: $color-grey-text;
+        @include font(normal, 400, 16px, 133.69%, none, $color-grey-text);
         display: block;
 	}
 	// .footer__contact-info
 	&__contact-info {
         font-family: 'Roboto';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 18px;
-        line-height: 150%;
-        color: $color-dark-text;
+        @include font(normal, 400, 18px, 150%, none, $color-dark-text);
         display: block;
         padding-top: 10px;
 	}
