@@ -55,8 +55,8 @@ document.querySelector('.slider-container__slider-next').addEventListener('click
         allSlides[1].querySelector('.slide__title').style.left= '0px';
         allSlides[1].querySelector('.slide__title').style.width= '400px';
         allSlides[1].querySelector('.slide__img').style.display= 'inline-block';
-        allSlides[1].querySelector('.slide__img').style.top= '-10px';
-        allSlides[1].querySelector('.slide__img').style.left= '10px';
+        allSlides[1].querySelector('.slide__img').style.top= '40px';
+        allSlides[1].querySelector('.slide__img').style.left= '-100px';
     }
     else if(offset==2302){
         allSlides[3].querySelector('.slide__scroll').style.display= 'none';
