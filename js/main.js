@@ -28,9 +28,11 @@ allSlides[1].querySelector('.slide__title').style.lineHeight= '32px';
 allSlides[1].querySelector('.slide__title').style.top= '55px';
 allSlides[1].querySelector('.slide__title').style.left= '-65px'; //
 allSlides[1].querySelector('.slide__title').style.width= '80px';
-allSlides[1].querySelector('.slide__img').style.opacity= '0.5';
-allSlides[1].querySelector('.slide__img').style.top= '-250px';
-allSlides[1].querySelector('.slide__img').style.left= '-80px';
+
+allSlides[1].querySelector('.slide__img').style.display= 'none';
+// allSlides[1].querySelector('.slide__img').style.opacity= '0.5';
+// allSlides[1].querySelector('.slide__img').style.top= '-250px';
+// allSlides[1].querySelector('.slide__img').style.left= '-80px';
 
 document.querySelector('.slider-container__slider-next').addEventListener('click', function(){
     offset = offset +1151;
@@ -43,9 +45,12 @@ document.querySelector('.slider-container__slider-next').addEventListener('click
         allSlides[2].querySelector('.slide__title').style.top= '55px';
         allSlides[2].querySelector('.slide__title').style.left= '-65px';
         allSlides[2].querySelector('.slide__title').style.width= '80px';
-        allSlides[2].querySelector('.slide__img').style.opacity= '0.5';
-        allSlides[2].querySelector('.slide__img').style.top= '0px';
-        allSlides[2].querySelector('.slide__img').style.left= '-80px';
+
+        allSlides[2].querySelector('.slide__img').style.display= 'none';
+        document.querySelector('.header__shadow-img').src= '../img/slider-image1.png';
+        // allSlides[2].querySelector('.slide__img').style.opacity= '0.5';
+        // allSlides[2].querySelector('.slide__img').style.top= '0px';
+        // allSlides[2].querySelector('.slide__img').style.left= '-80px';
 
 
         allSlides[1].querySelector('.slide__scroll').style.display= 'flex';
@@ -56,8 +61,10 @@ document.querySelector('.slider-container__slider-next').addEventListener('click
         allSlides[1].querySelector('.slide__title').style.top= '0px';
         allSlides[1].querySelector('.slide__title').style.left= '0px';
         allSlides[1].querySelector('.slide__title').style.width= '400px';
-        allSlides[1].querySelector('.slide__img').style.opacity= '1';
-        allSlides[1].querySelector('.slide__img').style.top= '0px';
+
+        allSlides[1].querySelector('.slide__img').style.display= 'inline-block';
+        // allSlides[1].querySelector('.slide__img').style.opacity= '1';
+        allSlides[1].querySelector('.slide__img').style.top= '-10px';
         allSlides[1].querySelector('.slide__img').style.left= '10px';
     }
     else if(offset==2302){
@@ -69,9 +76,12 @@ document.querySelector('.slider-container__slider-next').addEventListener('click
         allSlides[3].querySelector('.slide__title').style.top= '55px';
         allSlides[3].querySelector('.slide__title').style.left= '-65px';
         allSlides[3].querySelector('.slide__title').style.width= '80px';
-        allSlides[3].querySelector('.slide__img').style.opacity= '0.5';
-        allSlides[3].querySelector('.slide__img').style.top= '0px';
-        allSlides[3].querySelector('.slide__img').style.left= '-80px';
+
+        allSlides[3].querySelector('.slide__img').style.display= 'none';
+        document.querySelector('.header__shadow-img').src= '../img/slider-image1.png';
+        // allSlides[3].querySelector('.slide__img').style.opacity= '0.5';
+        // allSlides[3].querySelector('.slide__img').style.top= '0px';
+        // allSlides[3].querySelector('.slide__img').style.left= '-80px';
 
 
         allSlides[2].querySelector('.slide__scroll').style.display= 'flex';
@@ -82,10 +92,11 @@ document.querySelector('.slider-container__slider-next').addEventListener('click
         allSlides[2].querySelector('.slide__title').style.top= '0px';
         allSlides[2].querySelector('.slide__title').style.left= '0px';
         allSlides[2].querySelector('.slide__title').style.width= '400px';
-        allSlides[2].querySelector('.slide__img').style.opacity= '1';
+
+        allSlides[2].querySelector('.slide__img').style.display= 'inline-block';
+        // allSlides[1].querySelector('.slide__img').style.opacity= '1';
         allSlides[2].querySelector('.slide__img').style.top= '70px';
         allSlides[2].querySelector('.slide__img').style.left= '110px';
-
     }
     else if(offset==3453){
         allSlides[4].querySelector('.slide__scroll').style.display= 'none';
@@ -96,9 +107,12 @@ document.querySelector('.slider-container__slider-next').addEventListener('click
         allSlides[4].querySelector('.slide__title').style.top= '55px';
         allSlides[4].querySelector('.slide__title').style.left= '-65px';
         allSlides[4].querySelector('.slide__title').style.width= '80px';
-        allSlides[4].querySelector('.slide__img').style.opacity= '0.5';
-        allSlides[4].querySelector('.slide__img').style.top= '0px';
-        allSlides[4].querySelector('.slide__img').style.left= '-80px';
+
+        allSlides[4].querySelector('.slide__img').style.display= 'none';
+        document.querySelector('.header__shadow-img').src= '../img/slider-image1.png';
+        // allSlides[4].querySelector('.slide__img').style.opacity= '0.5';
+        // allSlides[4].querySelector('.slide__img').style.top= '0px';
+        // allSlides[4].querySelector('.slide__img').style.left= '-80px';
 
 
         allSlides[3].querySelector('.slide__scroll').style.display= 'flex';
@@ -109,10 +123,11 @@ document.querySelector('.slider-container__slider-next').addEventListener('click
         allSlides[3].querySelector('.slide__title').style.top= '0px';
         allSlides[3].querySelector('.slide__title').style.left= '0px';
         allSlides[3].querySelector('.slide__title').style.width= '400px';
-        allSlides[3].querySelector('.slide__img').style.opacity= '1';
+
+        allSlides[3].querySelector('.slide__img').style.display= 'inline-block';
+        // allSlides[1].querySelector('.slide__img').style.opacity= '1';
         allSlides[3].querySelector('.slide__img').style.top= '70px';
         allSlides[3].querySelector('.slide__img').style.left= '110px';
-
     }
     else if(offset==4604){
         allSlides[5].querySelector('.slide__scroll').style.display= 'none';
@@ -123,9 +138,12 @@ document.querySelector('.slider-container__slider-next').addEventListener('click
         allSlides[5].querySelector('.slide__title').style.top= '55px';
         allSlides[5].querySelector('.slide__title').style.left= '-65px';
         allSlides[5].querySelector('.slide__title').style.width= '80px';
-        allSlides[5].querySelector('.slide__img').style.opacity= '0.5';
-        allSlides[5].querySelector('.slide__img').style.top= '0px';
-        allSlides[5].querySelector('.slide__img').style.left= '-80px';
+
+        allSlides[5].querySelector('.slide__img').style.display= 'none';
+        document.querySelector('.header__shadow-img').src= '../img/slider-image1.png';
+        // allSlides[5].querySelector('.slide__img').style.opacity= '0.5';
+        // allSlides[5].querySelector('.slide__img').style.top= '0px';
+        // allSlides[5].querySelector('.slide__img').style.left= '-80px';
 
 
         allSlides[4].querySelector('.slide__scroll').style.display= 'flex';
@@ -136,10 +154,11 @@ document.querySelector('.slider-container__slider-next').addEventListener('click
         allSlides[4].querySelector('.slide__title').style.top= '0px';
         allSlides[4].querySelector('.slide__title').style.left= '0px';
         allSlides[4].querySelector('.slide__title').style.width= '400px';
-        allSlides[4].querySelector('.slide__img').style.opacity= '1';
+
+        allSlides[4].querySelector('.slide__img').style.display= 'inline-block';
+        // allSlides[1].querySelector('.slide__img').style.opacity= '1';
         allSlides[4].querySelector('.slide__img').style.top= '70px';
         allSlides[4].querySelector('.slide__img').style.left= '110px';
-
     }
     else if (offset>4604) {
         offset=0;
@@ -151,9 +170,12 @@ document.querySelector('.slider-container__slider-next').addEventListener('click
         allSlides[1].querySelector('.slide__title').style.top= '55px';
         allSlides[1].querySelector('.slide__title').style.left= '-65px';
         allSlides[1].querySelector('.slide__title').style.width= '80px';
-        allSlides[1].querySelector('..slide__img').style.opacity= '0.5';
-        allSlides[1].querySelector('.slide__img').style.top= '-250px';
-        allSlides[1].querySelector('.slide__img').style.left= '-80px';
+
+        allSlides[1].querySelector('.slide__img').style.display= 'none';
+        document.querySelector('.header__shadow-img').src= '../img/slider-image2.png';
+        // allSlides[1].querySelector('..slide__img').style.opacity= '0.5';
+        // allSlides[1].querySelector('.slide__img').style.top= '-250px';
+        // allSlides[1].querySelector('.slide__img').style.left= '-80px';
     }
     sliderLine.style.right = offset+'px';
 })
