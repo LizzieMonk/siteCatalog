@@ -16,6 +16,7 @@ $color-bg-benefit: #343A41;
 $color-benefit-text: #B7B7B7;
 $color-footer-line: #E5E5E5;
 $color-bg-form: #EEEEEE;
+$color-button-passive: #D0D0D0;
 
 $container-width-lg: 1400px;
 $container-width-sm: 345px;
@@ -290,6 +291,30 @@ $transition: all 400ms ease;
         }
         &:hover{
             transform: scale(1.1);
+        }
+    }
+    // .slider-container__buttons
+    &__buttons{
+        position: absolute;
+        right: 288px;
+        top: 496px;
+        z-index: 10;
+    }
+}
+.buttons{
+    // .buttons__button
+    &__button{
+        display: inline-block;
+        height: 5px;
+        width: 5px;
+        background: $color-button-passive;
+        border-radius: 50%;
+        transition: $transition;
+        margin: 0 3px;
+        &:hover{
+            height: 9px;
+            width: 9px;
+            // background: $color-dark-text
         }
     }
 }
@@ -1402,6 +1427,30 @@ $transition: all 400ms ease;
             &:hover{
                 transform: scale(1.1);
             }
+        }
+    }
+    // .slider-container__buttons
+    &__buttons{
+        position: absolute;
+        right: 115px;
+        top: 555px;
+        z-index: 10;
+    }
+}
+.buttons{
+    // .buttons__button
+    &__button{
+        display: inline-block;
+        height: 3px;
+        width: 3px;
+        background: $color-button-passive;
+        border-radius: 50%;
+        transition: $transition;
+        margin: 0 3px;
+        &:hover{
+            height: 3px;
+            width: 3px;
+            // background: $color-dark-text
         }
     }
 }

@@ -318,6 +318,26 @@ h1, h2, h3, h4, h5, h6 {
 .slider-container__slider-next:hover {
   transform: scale(1.1);
 }
+.slider-container__buttons {
+  position: absolute;
+  right: 288px;
+  top: 496px;
+  z-index: 10;
+}
+
+.buttons__button {
+  display: inline-block;
+  height: 5px;
+  width: 5px;
+  background: #D0D0D0;
+  border-radius: 50%;
+  transition: all 400ms ease;
+  margin: 0 3px;
+}
+.buttons__button:hover {
+  height: 9px;
+  width: 9px;
+}
 
 .slider {
   overflow: hidden;
@@ -1410,6 +1430,25 @@ h1, h2, h3, h4, h5, h6 {
   }
   .slider-container__slider-next img:hover {
     transform: scale(1.1);
+  }
+  .slider-container__buttons {
+    position: absolute;
+    right: 115px;
+    top: 555px;
+    z-index: 10;
+  }
+  .buttons__button {
+    display: inline-block;
+    height: 3px;
+    width: 3px;
+    background: #D0D0D0;
+    border-radius: 50%;
+    transition: all 400ms ease;
+    margin: 0 3px;
+  }
+  .buttons__button:hover {
+    height: 3px;
+    width: 3px;
   }
   .slider {
     overflow: hidden;
